@@ -3,7 +3,7 @@ html{
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Shadows Into Light";
    
 }
 
@@ -31,7 +31,7 @@ body {
 
 .navText{
     color: #f7941e;
-    font-size: 2vh;
+    font-size: 3vh;
 }
 
 #backgroundimage {
@@ -47,19 +47,71 @@ body {
 }
 
 /* Button styling */
-button {
+
+.spooky-btn {
     margin-top: 100px;
     padding: 10px 20px;
-    font-size: 1rem;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 2px solid white;
+    font-size: 1.5rem;
+    color: #ff7518; 
+    background-color: #000; 
+    border: 2px solid #ff7518; 
+    border-radius: 10px; 
+    font-family: "Shadows Into Light";
+    box-shadow: 0 0 15px rgba(255, 117, 24, 0.8), 0 0 30px rgba(255, 117, 24, 0.6); 
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
-}
+    display: none;
+  }
 
-button:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-}
+  .spooky-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    pointer-events: none;
+  }
+
+  .spooky-btn:hover::before {
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+  }
+
+  .spooky-btn:hover {
+    background-color: #ff7518; 
+    color: #000; 
+    box-shadow: 0 0 25px rgba(255, 117, 24, 1), 0 0 50px rgba(255, 117, 24, 0.8); 
+  }
+
+
+  .spooky-btn:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  
 
 /* https://codepen.io/denic/pen/GRoOxbM CREDITS */
 .wrapper {
@@ -68,10 +120,11 @@ button:hover {
     left: 50%;
     transform: translateX(-50%);
     text-align: center; /* Center align text horizontally */
+    
 }
 
 .typing-demo {
-    width: 36ch;
+    width: 46ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -80,6 +133,7 @@ button:hover {
     font-size: 3em;
     color: #f7941e;
     margin-top: 150px;
+    font-family: "Shadows Into Light";
 }
 
 @keyframes typing {
@@ -113,3 +167,27 @@ button:hover {
         
     }
 }
+
+.popup {
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border: 2px solid #ff7518; 
+    z-index: 1000; 
+  }
+
+  /* Overlay */
+  .overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+  }
