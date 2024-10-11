@@ -13,6 +13,15 @@ $(document).ready(function(){
         $('#popup').fadeOut(300); 
       });
 
+
+
+      $(document).on('keydown', function(event) {
+        if (event.key == "Escape") {
+          $('#overlay').fadeOut(300); 
+          $('#popup').fadeOut(300); 
+        }
+    });
+
       // Hide the popup and overlay when clicking outside of the popup
       $('#overlay').on('click', function () {
         $(this).fadeOut(300); 
