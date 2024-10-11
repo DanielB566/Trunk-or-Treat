@@ -4,8 +4,15 @@ html{
 
 body {
     font-family: "Shadows Into Light";
-   
+    overflow: hidden;
 }
+
+@media (max-width: 768px) {
+     body {
+        overflow: auto; 
+    }
+}
+
 
 .navhover:hover {
     position: relative;
@@ -97,6 +104,7 @@ body {
     animation-iteration-count: 1;
   }
 
+
   @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -153,9 +161,7 @@ body {
         font-size: 2em;
     }
 
-    .navText{
-        
-    }
+    
 }
 
 @media (max-width: 576px) {
@@ -163,9 +169,7 @@ body {
         font-size: 1.5em;
     }
 
-    .navText{
-        
-    }
+   
 }
 
 .popup {
@@ -178,6 +182,8 @@ body {
     padding: 20px;
     border: 2px solid #ff7518; 
     z-index: 1000; 
+    width: 60%; 
+    max-width: 600px;
   }
 
   /* Overlay */
@@ -190,4 +196,20 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.5); 
     z-index: 999; 
+  }
+
+
+  @media (max-width: 768px) {
+    .popup {
+      width: 80%;
+      padding: 15px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .popup {
+      width: 90%; 
+      padding: 10px; 
+      font-size: 14px; 
+    }
   }
