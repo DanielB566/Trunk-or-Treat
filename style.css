@@ -156,7 +156,7 @@ body {
 /* https://codepen.io/denic/pen/GRoOxbM CREDITS */
 .wrapper {
     position: absolute;
-    top: 250px;
+    top: 210px;
     /* Adjust this value to move it further down or up */
     left: 50%;
     transform: translateX(-50%);

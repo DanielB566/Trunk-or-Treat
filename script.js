@@ -30,14 +30,25 @@ $(document).ready(function () {
   // Code for ShowCase Page starts here!
 
   $(".gallery")
-  .on("mouseenter", function () {
-    $(this).find('#infoBtn2').show(); 
-  })
-  .on("mouseleave", function () {
-    $(this).find('#infoBtn2').hide(); 
-  });
+        .on("mouseenter", function () {
+            $(this).find('.infoBtn').show(); 
+        })
+        .on("mouseleave", function () {
+            $(this).find('.infoBtn').hide(); 
+        });
 
-$('#infoBtn2').on('click', function() {
-  console.log("Button clicked");
-});
-});
+   
+    $(".infoBtn").on("click", function () {
+       
+        let $description = $(this).data('description');
+        
+        $("#modalDescription").text($description);
+        
+        // Show the modal
+        let infoModal = new bootstrap.Modal(document.getElementById('infoModal'), { // creates new instance of the info modal so it works for all cards.
+            keyboard: true // if user clicks escape modal closes
+        });
+        infoModal.show();
+    });
+
+})
