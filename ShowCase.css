@@ -201,6 +201,8 @@ body {
     .gallery:hover img {
         transform: scale(1.0); 
     }
+
+    
 }
 
 @media (max-width: 480px) {

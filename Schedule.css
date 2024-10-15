@@ -266,4 +266,42 @@ body {
     font-size: 5vh;
 }
 
+.infoBox {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.info-image {
+    width: 150px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #f7941e; /* Light border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.info-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.text-content h1 {
+    
+    margin: 5px 0;
+}
+
+.text-content {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #f7941e;
+    border-radius: 10px;
+    justify-content: center;
+    max-width: 500px;
+}
+
+
 

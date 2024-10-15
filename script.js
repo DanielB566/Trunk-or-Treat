@@ -56,13 +56,16 @@ $(document).ready(function () {
 
   $('#SetUp').on('click', function () {
     $('#infoBox1').slideToggle();
+ 
   });
 
   $('#EventTime').on('click', function () {
     $('#infoBox2').slideToggle();
+  
   });
 
   $('#WrapUp').on('click', function () {
     $('#infoBox3').slideToggle();
+   
   });
 })
