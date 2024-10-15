@@ -30,25 +30,39 @@ $(document).ready(function () {
   // Code for ShowCase Page starts here!
 
   $(".gallery")
-        .on("mouseenter", function () {
-            $(this).find('.infoBtn').show(); 
-        })
-        .on("mouseleave", function () {
-            $(this).find('.infoBtn').hide(); 
-        });
-
-   
-    $(".infoBtn").on("click", function () {
-       
-        let $description = $(this).data('description');
-        
-        $("#modalDescription").text($description);
-        
-        // Show the modal
-        let infoModal = new bootstrap.Modal(document.getElementById('infoModal'), { // creates new instance of the info modal so it works for all cards.
-            keyboard: true // if user clicks escape modal closes
-        });
-        infoModal.show();
+    .on("mouseenter", function () {
+      $(this).find('.infoBtn').show();
+    })
+    .on("mouseleave", function () {
+      $(this).find('.infoBtn').hide();
     });
 
+
+  $(".infoBtn").on("click", function () {
+
+    let $description = $(this).data('description');
+
+    $("#modalDescription").text($description);
+
+    // Show the modal
+    let infoModal = new bootstrap.Modal(document.getElementById('infoModal'), { // creates new instance of the info modal so it works for all cards.
+      keyboard: true // if user clicks escape modal closes
+    });
+    infoModal.show();
+  });
+
+
+  // Schedule JS
+
+  $('#SetUp').on('click', function () {
+    $('#infoBox1').slideToggle();
+  });
+
+  $('#EventTime').on('click', function () {
+    $('#infoBox2').slideToggle();
+  });
+
+  $('#WrapUp').on('click', function () {
+    $('#infoBox3').slideToggle();
+  });
 })
