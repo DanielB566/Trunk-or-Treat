@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: "Shadows Into Light";
-    background-color: #5F6A72;
+    background-color: #454d4d;
 }
 
 
@@ -245,11 +245,21 @@ body {
     z-index: 999;
 }
 
+@media(max-width: 964px){
+    .spooky-btn{
+        bottom: 80%;
+    }
+}
+
 
 @media (max-width: 768px) {
     .popup {
         width: 80%;
         padding: 15px;
+    }
+
+    .spooky-btn{
+        bottom: 90%;
     }
 }
 
@@ -259,14 +269,38 @@ body {
         padding: 10px;
         font-size: 14px;
     }
+
+    
+    
 }
-
-
 
 .ScheduleText{
     color: #f7941e;
     margin-top: 20px;
     font-size: 5vh;
 }
+
+.modal-body {
+    font-size: 1.5em; /* Make the text larger */
+}
+
+.footerhover:hover{
+    animation: bounce .3s infinite alternate;
+    
+}
+
+@keyframes bounce {
+    to { transform: scale(1.2); }
+  }
+
+  .footerstyle{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+   
+  }
 
 

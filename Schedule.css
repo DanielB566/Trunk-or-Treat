@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: "Shadows Into Light";
-    background-color: #5F6A72;
+    background-color: #454d4d;
 }
 
 
@@ -301,7 +301,27 @@ body {
     border-radius: 10px;
     justify-content: center;
     max-width: 500px;
+    color: white;
 }
+
+.footerhover:hover{
+    animation: bounce .3s infinite alternate;
+    
+}
+
+@keyframes bounce {
+    to { transform: scale(1.2); }
+  }
+
+  .footerstyle{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    top: 553px;
+  }
 
 
 
